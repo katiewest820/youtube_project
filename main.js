@@ -49,9 +49,8 @@ function submitSearch() {
 function displayResults(callback) {
 
     for (let i = 0; i < callback.items.length; i++) {
-        $('.js-search-results').append(`<div><iframe src="https://www.youtube.com/embed/${callback.items[i].id.videoId}" 
-            width="300" frameborder="0" allowfullscreen target="_parent"></iframe> <button onclick="getDataFromApi(&quot;${value}&quot;, null, &quot;${callback.items[i].id.videoId}&quot;)">Related</button><div>`)
-			//<iframe src='${callback.items[i].snippet.thumbnails.default.url}' width="200" frameborder="0" allowfullscreen></iframe></a>`)
+        $('.js-search-results').append(`<div class="subgrid"><iframe title="video${[i +1]}" src="https://www.youtube.com/embed/${callback.items[i].id.videoId}" 
+            width="300" frameborder="0" allowfullscreen target="_parent"></iframe> <button class="related" onclick="getDataFromApi(&quot;${value}&quot;, null, &quot;${callback.items[i].id.videoId}&quot;)">Related</button><div>`)
     }
     console.log(callback)
     npt = callback.nextPageToken

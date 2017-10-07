@@ -5,14 +5,12 @@ body{
 	height:100%;
 	width:100%;
 	text-align: center;
-
 }
 
 
 h1{
 	font-weight: bold;
 	font-size: 40px
-
 }
 
 .results{
@@ -21,17 +19,22 @@ height: 800px;
 
 
 .gridButtons{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	
+	position:relative;
+	top: 120px;
 }
 
 .next{
 	visibility: hidden;
+	position:absolute;
+	right:5%;
+	bottom:5%;
 }
 
 .prev{
 	visibility: hidden;
+	position:absolute;
+	left:5%;
+	bottom:5%;
 }
 
 
@@ -39,6 +42,18 @@ height: 800px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(5, 1fr);
+}
+
+.subgrid{
+	display:grid;
+	grid-template-rows: 80% 20%;
+	margin:auto;
+
+}
+
+.related{
+	width:30%;
+	margin:auto;
 }
 
 
@@ -54,18 +69,9 @@ height: 800px;
 
 
 .gridButtons{
-	display: inline-block;
-	position: static;
-	width:80%;
-	justify-content: center;
-}
-
-.next{
-	float:right;
-}
-
-.prev{
-	float:left;
+	width:50%;
+	margin:auto;
+	top:20px;
 }
 
 .results{
